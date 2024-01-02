@@ -6,27 +6,13 @@ const connectDB = async () => {
     const connectionInstance = await mongoose.connect(
       `${process.env.MONGODB_URI}/${DB_NAME}`
     );
-
     console.log(`DB connected ${connectionInstance.connection.host}`);
   } catch (error) {
     console.error("Error in DB connection ", error);
     process.exit(1);
   }
 };
-
-
 export default connectDB;
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 import express from "express";
